@@ -1,4 +1,4 @@
-<!DICTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -6,6 +6,28 @@
     </title>
   </head>
   <body>
-    <bitton id="go">Average</button>
+    <button id="go">Average</button>
+    <script>
+      var num;
+      var counter;
+      var average;
+      var total;
+      var numP;
+      document.getElementById("go").addEventListener("click", function(){total = 0;
+          counter = 0;
+        loop: {
+        while(true){
+        	
+          num = prompt("Enter number or type \"quit\" to quit");
+          if(num == "quit"){break loop;}
+          numP = parseInt(num);
+          total = total + numP;
+          counter++;
+        }
+        }
+        average = total/counter;
+        alert("The average is " + average);
+      });
+    </script>
   </body>
 </html>
